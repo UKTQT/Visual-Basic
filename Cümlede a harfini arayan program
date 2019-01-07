@@ -1,0 +1,15 @@
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim cümle, karakter As String
+        cümle = TextBox1.Text
+        karakter = "b"
+        Dim a, sayac As Integer
+        For a = 1 To cümle.Length
+            If cümle.Chars(a) = karakter Then
+                sayac = sayac + 1
+            End If
+        Next
+        Label1.Text = sayac
+    End Sub
+End Class
+' CÜMLEDE A HARFİNİ ARAYAN PROGRAM
