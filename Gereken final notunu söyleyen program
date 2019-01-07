@@ -1,0 +1,24 @@
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim vize As Integer
+        vize = TextBox1.Text
+        Dim a, b As Double
+
+        a = vize * 0.4
+
+        For b = 60 - a To 100
+
+            If (b * 0.6 + a) >= 59.5 And (b * 0.6 + a) <= 60 Then
+                MsgBox(b)
+
+            End If
+
+
+        Next
+
+        If b <= 49 Then
+            MsgBox("50 alırsanız geçiyorsunuz")
+        End If
+
+    End Sub
+End Class
