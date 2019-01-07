@@ -1,0 +1,59 @@
+Public Class Form1
+
+
+
+
+    Dim tek, tekk, cift, onuncu, onbirinci, asd, on_islem, b, d As Integer
+    Dim dokuz, onn, tc, onb As String
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+
+        If TextBox1.Text.Substring(0, 1) = 0 Then  ' 0 Kontrolü
+            MsgBox("İlk karakter 0 olamaz")
+            TextBox1.Clear()
+
+        Else ' ilk karakter 0 değilse
+
+            dokuz = TextBox1.Text
+            tek = 0
+            cift = 0
+
+            For a = 0 To 8 Step 2   ' Tek sayıların alınması
+                b = TextBox1.Text.Substring(a, 1)
+                tek += b
+
+            Next
+
+            tekk = tek * 7
+
+            For c = 1 To 7 Step 2   ' Çift sayıların alınması
+                d = TextBox1.Text.Substring(c, 1)
+                cift += d
+
+            Next
+
+            on_islem = (tekk - cift) Mod 10
+            onn = Convert.ToString(on_islem)
+
+
+            onbirinci = (tek + cift + on_islem) Mod 10
+            onb = Convert.ToString(onbirinci)
+
+
+
+            tc = dokuz + onn + onb
+
+
+            TextBox2.Text = tc
+
+            tek = 0
+            cift = 0
+
+        End If
+
+
+    End Sub
+
+End Class
