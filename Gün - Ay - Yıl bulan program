@@ -1,0 +1,11 @@
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim gun, ay, yil As Integer
+
+        gun = DateTimePicker1.Value.Day
+        ay = DateTimePicker1.Value.Month
+        yil = DateTimePicker1.Value.Year
+
+        Label1.Text = gun & "/" & ay & "/" & yil
+    End Sub
+End Class
