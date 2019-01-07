@@ -1,0 +1,47 @@
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        ' ALGORİTMA
+        ' 1 - 2 - 3... 9 sabit terimler
+        ' Değişen terimler sabit terim ile çarpılacak terim ve sabit ile çarpılacak terimin çarpımıdır.
+        ' C 1 den 10 a kadar dönüyor
+        ' A ise 10 dan 1 e kadar dönüyor
+        ' C 1 den 10 a kadar dönerken a ise matematiksel hesaplama ile her listbox'a özgü sabit terim oluşturuyor
+        ' Bu sayede C nin çarpılması gereken sabit terim el ile yazılmadan otomatik belirleniyor örn: 1 2 3 
+
+
+        For c = 1 To 10
+            For a = 10 To 1 Step -1
+
+                ListBox1.Items.Add("1 x " & c & " = " & (a - (a - 1)) * c)
+
+                ListBox2.Items.Add("2 x " & c & " = " & (a - (a - 2)) * c)
+
+                ListBox3.Items.Add("3 x " & c & " = " & (a - (a - 3)) * c)
+
+                ListBox4.Items.Add("4 x " & c & " = " & (a - (a - 4)) * c)
+
+                ListBox5.Items.Add("5 x " & c & " = " & (a - (a - 5)) * c)
+
+                ListBox6.Items.Add("6 x " & c & " = " & (a - (a - 6)) * c)
+
+                ListBox7.Items.Add("7 x " & c & " = " & (a - (a - 7)) * c)
+
+                ListBox8.Items.Add("8 x " & c & " = " & (a - (a - 8)) * c)
+
+                ListBox9.Items.Add("9 x " & c & " = " & (a - (a - 9)) * c)
+
+                ListBox10.Items.Add("10 x " & c & " = " & (a - (a - 10)) * c)
+                Exit For
+
+
+            Next
+        Next
+
+
+
+
+
+
+    End Sub
+End Class
